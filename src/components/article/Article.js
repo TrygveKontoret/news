@@ -1,11 +1,12 @@
-import React from 'react'
+import {wrapper} from './article.module.scss'
 
-const Article = () => {
+const Article = (props) => {
+    const {titletext, bodytext, authortext} = props;
     return (
-        <div>
-            <h2>Headline</h2>
-            <p>Body</p>
-            <span>Author:</span>
+        <div className={wrapper}>
+            <h2>{titletext}</h2>
+            <p>{bodytext}</p>
+            <span>Author: {authortext}</span>
         </div>
     )
 }
